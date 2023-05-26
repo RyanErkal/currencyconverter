@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="dashboard.css" />
+		<script src="dashboard.js" defer></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<div class="rates">
+			<h1>Exchange Rates</h1>
+			<div id="EUR"></div>
+			<div id="GBP"></div>
+			<div id="USD"></div>
+			<div id="JPY"></div>
+			<div id="CHF"></div>
+		</div>
+		<div class="converter">
+			<textarea
+				name="inputcurrency"
+				id="input"
+				cols="30"
+				rows="1"></textarea>
+			<input list="currencies" />
+
+			<datalist id="currencies">
+				<option value="EUR"></option>
+				<option value="GBP"></option>
+				<option value="USD"></option>
+				<option value="JPY"></option>
+				<option value="CHF"></option>
+			</datalist>
+
+			<textarea
+				name="outputcurrency"
+				id="output"
+				cols="30"
+				rows="1"
+				readonly></textarea>
+			<input list="currencies" />
+			<button id="convert">Convert</button>
+		</div>
+	</body>
+</html>
