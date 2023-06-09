@@ -5,42 +5,243 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="dashboard.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<script src="dashboard.js" defer></script>
-		<title>Document</title>
+		<title>Admin Dashboard</title>
 	</head>
 	<body>
-		<div class="rates">
-			<h1>Exchange Rates</h1>
-			<div id="EUR"></div>
-			<div id="GBP"></div>
-			<div id="USD"></div>
-			<div id="JPY"></div>
-			<div id="CHF"></div>
-		</div>
-		<div class="converter">
-			<textarea
-				name="inputcurrency"
-				id="input"
-				cols="30"
-				rows="1"></textarea>
-			<input list="currencies" />
-
-			<datalist id="currencies">
-				<option value="EUR"></option>
-				<option value="GBP"></option>
-				<option value="USD"></option>
-				<option value="JPY"></option>
-				<option value="CHF"></option>
-			</datalist>
-
-			<textarea
-				name="outputcurrency"
-				id="output"
-				cols="30"
-				rows="1"
-				readonly></textarea>
-			<input list="currencies" />
-			<button id="convert">Convert</button>
+		<div class="maingrid">
+			<div class="sidebar">
+				<div class="sideitem">
+					<button
+						class="menu"
+						onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+						aria-label="Main Menu">
+						<svg width="100" height="100" viewBox="0 0 100 100">
+							<path
+								class="line line1"
+								d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+							<path class="line line2" d="M 20,50 H 80" />
+							<path
+								class="line line3"
+								d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+						</svg>
+					</button>
+					<!-- <span class="material-symbols-outlined">
+						menu <input type="checkbox" id="menuToggle"
+					/></span> -->
+				</div>
+				<div class="sideitem">
+					<span class="sideitemcard"
+						><span class="material-symbols-outlined"> home </span
+						>Dashboard</span
+					>
+				</div>
+				<div class="sideitem">
+					<span class="sideitemcard"
+						><span class="material-symbols-outlined">
+							shelf_position </span
+						>Projects</span
+					>
+				</div>
+				<div class="sideitem">
+					<span class="sideitemcard"
+						><span class="material-symbols-outlined">
+							calendar_month </span
+						>Events</span
+					>
+				</div>
+				<div class="sideitem">
+					<span class="sideitemcard"
+						><span class="material-symbols-outlined">
+							contact_page </span
+						>Contact</span
+					>
+				</div>
+				<div class="sideitem">
+					<span class="sideitemcard"
+						><span class="material-symbols-outlined">
+							settings </span
+						>Settings</span
+					>
+				</div>
+			</div>
+			<div class="pagegrid">
+				<div class="navbar">
+					<div class="search">
+						<input type="text" placeholder="Search" />
+					</div>
+					<div class="navitem">
+						<span class="navitemcard">github-icon</span>
+					</div>
+					<div class="navitem">
+						<span id="github" class="navitemcard">
+							<img src="github-icon.svg" alt="GitHub" />
+						</span>
+					</div>
+					<div id="darkmode" class="navitem">
+						<span id="noboxshadow" class="navitemcard"
+							><span class="material-symbols-outlined">
+								dark_mode
+							</span></span
+						>
+					</div>
+				</div>
+				<div class="mainpage">
+					<div class="projects">
+						<h3 class="projecttitle">Projects</h3>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">
+									Currency Converter
+								</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward</span
+								>
+							</span>
+						</div>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">Calculator</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward
+								</span>
+							</span>
+						</div>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">
+									Day Trading Journal
+								</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward
+								</span>
+							</span>
+						</div>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">
+									Headspace Tracker
+								</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward
+								</span>
+							</span>
+						</div>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">Study Tracker</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward
+								</span>
+							</span>
+						</div>
+						<div class="project">
+							<span class="projectcard"
+								><img
+									src="pexels-pixabay-534216.jpg"
+									alt="currency" />
+								<div class="projecttitle">
+									Membership Admin Dashboard
+								</div>
+								<span class="material-symbols-outlined appear">
+									code_blocks arrow_forward
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="rightbar">
+						<div class="todo">
+							<h3>To-Do</h3>
+							<div class="task">
+								<span class="taskcard"
+									>Hamburger Menu Functionality</span
+								>
+							</div>
+							<div class="task">
+								<span class="taskcard">Search Bar</span>
+							</div>
+							<div class="task">
+								<span class="taskcard"
+									>Project Highlight Animation</span
+								>
+							</div>
+							<div class="task">
+								<span class="taskcard"
+									>Link GitHub w/ Icon</span
+								>
+							</div>
+						</div>
+						<div class="announcements">
+							<h3>Announcements</h3>
+							<div class="announcement">
+								<span class="announcementcard"
+									>Completed Dark Mode Toggle</span
+								>
+							</div>
+							<div class="announcement">
+								<span class="announcementcard"
+									>Completed Side Bar Icon Transitions</span
+								>
+							</div>
+							<div class="announcement">
+								<span class="announcementcard"
+									>Used CSS Variables</span
+								>
+							</div>
+							<div class="announcement">
+								<span class="announcementcard"
+									>Used Box Shadow</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

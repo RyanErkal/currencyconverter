@@ -1,103 +1,35 @@
-var myHeaders = new Headers();
-myHeaders.append("apikey", "TfTL9pRJXI4BWjIP6cAJirmbisPA3HCe");
+let darkmode = document.getElementById("darkmode");
+darkmode.addEventListener("click", darkMode);
 
-var requestOptions = {
-  method: 'GET',
-  redirect: 'follow',
-  headers: myHeaders
+// document.querySelectorAll(".material-symbols-outlined").forEach((m) => {
+//     console.log(m);
+//     m.classList.add("material-symbols-outlined-dark");
+//     m.classList.remove("material-symbols-outlined");
+// });
+
+let darkmodeon = false;
+
+function darkMode() {
+    // let element = document.body;
+    // element.classList.toggle("dark-mode");
+    // document.querySelectorAll(".material-symbols-outlined").forEach((m) => {
+    //     console.log(m);
+    //     m.classList.add("material-symbols-outlined-dark");
+    //     m.classList.remove("material-symbols-outlined");
+    // });
+    if (darkmodeon) {
+        document.documentElement.style.setProperty('--background-color', '#333333');
+        document.documentElement.style.setProperty('--text-color', '#f5f5f5');
+        document.documentElement.style.setProperty('--accent-color', '#cf9fff');
+        document.documentElement.style.setProperty('--accent-color-light', '#cf9fff80');
+        darkmodeon = false;
+    }else
+    {
+        document.documentElement.style.setProperty('--background-color', '#f5f5f5');
+        document.documentElement.style.setProperty('--text-color', '#333333');
+        document.documentElement.style.setProperty('--accent-color', '#ff7f50');
+        document.documentElement.style.setProperty('--accent-color-light', '#ff7f5080');
+        darkmodeon = true;
+    }
 };
 
-fetch("https://api.apilayer.com/exchangerates_data/latest?symbols=GBP%2CEUR%2CJPY%2CCHF&base=USD", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log("json: ",result))
-  .catch(error => console.log('error', error));
-
-//const GBP = result.rates.GBP;
-//referce json data
-let myJson = JSON.stringify(result);
-console.log("myJson: ", myJson);
-let GBP = response.rates.GBP;
-console.log(GBP);
-let EUR = result.rates.EUR;
-console.log(EUR);
-let JPY = myJson.rates.JPY;
-let CHF = myJson.rates.CHF;
-
-//convert from one currency to another
-function convert(){
-    //get the amount to convert
-    let amount = document.getElementById('input').value;
-    //get the input currency
-    let inputCurrency = document.getElementById('inputcurrency').value;
-    //get the output currency
-    let outputCurrency = document.getElementById('outputcurrency').value;
-    //get the conversion rate
-    if(inputCurrency == 'EUR'){
-        if(outputCurrency == 'EUR'){
-            document.getElementById('output').value = amount;
-        }else if(outputCurrency == 'GBP'){
-            document.getElementById('output').value = amount * GBP;
-        }else if(outputCurrency == 'USD'){
-            document.getElementById('output').value = amount * EUR;
-        }else if(outputCurrency == 'JPY'){
-            document.getElementById('output').value = amount * JPY;
-        }else if(outputCurrency == 'CHF'){
-            document.getElementById('output').value = amount * CHF;
-        }
-    }else if(inputCurrency == 'GBP'){
-        if(outputCurrency == 'EUR'){
-            document.getElementById('output').value = amount * EUR;
-        }else if(outputCurrency == 'GBP'){
-            document.getElementById('output').value = amount;
-        }else if(outputCurrency == 'USD'){
-            document.getElementById('output').value = amount * GBP;
-        }else if(outputCurrency == 'JPY'){
-            document.getElementById('output').value = amount * JPY;
-        }else if(outputCurrency == 'CHF'){
-            document.getElementById('output').value = amount * CHF;
-        }
-    }else if(inputCurrency == 'USD'){
-        if(outputCurrency == 'EUR'){
-            document.getElementById('output').value = amount * EUR;
-        }else if(outputCurrency == 'GBP'){
-            document.getElementById('output').value = amount * GBP;
-        }else if(outputCurrency == 'USD'){
-            document.getElementById('output').value = amount;
-        }else if(outputCurrency == 'JPY'){
-            document.getElementById('output').value = amount * JPY;
-        }else if(outputCurrency == 'CHF'){
-            document.getElementById('output').value = amount * CHF;
-        }
-    }else if(inputCurrency == 'JPY'){
-        if(outputCurrency == 'EUR'){
-            document.getElementById('output').value = amount * EUR;
-        }else if(outputCurrency == 'GBP'){
-            document.getElementById('output').value = amount * GBP;
-        }else if(outputCurrency == 'USD'){
-            document.getElementById('output').value = amount * USD;
-        }else if(outputCurrency == 'JPY'){
-            document.getElementById('output').value = amount;
-        }else if(outputCurrency == 'CHF'){
-            document.getElementById('output').value = amount * CHF;
-        }
-    }else if(inputCurrency == 'CHF'){
-        if(outputCurrency == 'EUR'){
-            document.getElementById('output').value = amount * EUR;
-        }else if(outputCurrency == 'GBP'){
-            document.getElementById('output').value = amount * GBP;
-        }else if(outputCurrency == 'USD'){
-            document.getElementById('output').value = amount * USD;
-        }else if(outputCurrency == 'JPY'){
-            document.getElementById('output').value = amount * JPY;
-        }else if(outputCurrency == 'CHF'){
-            document.getElementById('output').value = amount;
-        }
-    }
-}
-
-
-//add event listeners
-document.getElementById('convert').addEventListener('click', convert);
-document.getElementById('input').addEventListener('keyup', convert);
-document.getElementById('inputcurrency').addEventListener('change', convert);
-document.getElementById('outputcurrency').addEventListener('change', convert);

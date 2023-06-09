@@ -1,0 +1,157 @@
+html {
+	margin: 0;
+}
+
+body {
+	background-color: #f5f5f5;
+	font-family: "Verdana", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	background-color: navy;
+	color: white;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 0;
+	margin-top: 0;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.general {
+	background-color: #f5f5f5;
+	border: 1px solid navy;
+	border-radius: 5px;
+	margin: 1rem auto;
+	max-width: 600px;
+	padding: 1rem;
+}
+
+.general label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.general input {
+	border: 1px solid navy;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: 80%;
+}
+
+.education {
+	background-color: #f5f5f5;
+	border: 1px solid navy;
+	border-radius: 5px;
+	margin: 1rem auto;
+	max-width: 600px;
+	padding: 1rem;
+}
+
+.education label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.education input {
+	border: 1px solid navy;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: 80%;
+}
+
+.experience {
+	background-color: #f5f5f5;
+	border: 1px solid navy;
+	border-radius: 5px;
+	margin: 1rem auto;
+	max-width: 600px;
+	padding: 1rem;
+}
+
+.experience label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.experience input {
+	border: 1px solid navy;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: 80%;
+}
+
+.skills {
+	background-color: #f5f5f5;
+	border: 1px solid navy;
+	border-radius: 5px;
+	margin: 1rem auto;
+	max-width: 600px;
+	padding: 1rem;
+}
+
+.skills label {
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.skills input {
+	border: 1px solid navy;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	width: 80%;
+}
+
+.submit > button {
+	border: 1px solid navy;
+	border-radius: 5px;
+	display: block;
+	font-size: 1rem;
+	font-weight: 700;
+	margin: 1rem auto;
+	padding: 0.5rem;
+	max-width: 600px;
+}
+
+.placeholder {
+	background-color: #f5f5f5;
+	border: 1px solid navy;
+	border-radius: 5px;
+	margin: 1rem auto;
+	max-width: 600px;
+	padding: 1rem;
+}
